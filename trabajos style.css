@@ -1,0 +1,64 @@
+body{
+    background-image: url(./Logos/Fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: 200cqh;
+    background-attachment: fixed;
+}
+div {
+    text-align: center;
+}
+nav{
+    color: #00ced1;
+    background-color: #000000AB;
+}
+nav :hover{
+    color: #ff8400;
+}
+h1{
+    margin-top: 70px;
+    color: #000000;
+    background-color: #00ced1ab;
+    text-align: center;
+} 
+#trabajos{
+    margin-top: 50px;
+    margin-left: 50px;
+    border-style: groove;
+    border-color: black;
+    border-style: solid;
+    border-width: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#instagram{
+    display: block;
+    text-decoration: none;
+    margin-top: 50px;
+    color: #00ced1;
+    background-color: #000000AB;
+}
+#instagram:hover{
+    color: #ff8400;
+}
+#facebook{
+    display: block;
+    text-decoration: none;
+    margin-top: 7px;
+    color: #00ced1;
+    background-color: #000000AB;
+}
+#facebook:hover{
+    color: #ff8400;
+}
