@@ -1,0 +1,231 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* Todos los HTML */
+
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr auto auto 1fr 1fr 1fr 1fr;
+    background-image: url(./logos/);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: 100vh;
+}
+.encabezado{
+    display: grid;
+    grid-column: 1 /4;
+    grid-row: 1 / 2;
+    background-color: #befcfeab;
+}
+.logo{
+    justify-self: center;
+}
+.busqueda{
+    display: flex;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+.carrito{
+    display: flex;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    background-color: #befcfeab;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.inicio, .productos, .galeria, .diseñado, .contacto{
+    text-decoration: none;
+    color: #2c9fa3;
+    margin-right: -2px;
+    border: 2px solid #ff8846;
+    border-radius: 5px;
+    padding-top: 7px;
+    padding-bottom: 3px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.navbar :hover{
+    color: #ff8846;
+}
+
+/* CSS Index */ 
+
+.slider{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column: 1 / 2;
+    grid-template-rows: auto auto auto;
+    margin-top: 17px;
+    margin-bottom: 10px;
+}
+.slider div .slider1 {
+    width: 450px;
+    height: 350px;
+}
+.slider div .slider2 {
+    width: 450px;
+    height: 350px;
+}
+.slider div .slider3 {
+    width: 450px;
+    height: 350px;
+}
+.indexh2{
+    display: flex;
+    height: 37px;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    background-color: #6DD6DA;
+    text-align: center;
+    padding:5px 100px 2px 100px;
+}
+.indexh3{
+    display: grid;
+    grid-row: 4 / 5;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 7px;
+    margin-left: 100px;
+    margin-top: 90px;
+    margin-right: 1100px;
+    background-color: #ff8846;
+    text-align: center;
+    border-radius: 7px;
+    border: 3px solid #2c9fa3;ç
+}
+li{
+    /*seguir de aca*/
+    grid-row: 4 / 5;
+    list-style-position: inside;
+    padding: 7px;
+    padding-right: 10px;
+    margin-top: -3px;
+    margin-left: 170px;
+    margin-right: 1040px;
+    background-color: #ff8846;
+    text-align: center;
+    border-radius: 7px;
+    border: 3px solid #2c9fa3;ç
+    font-size: 20px;
+}
+.espejos{
+    position: absolute;
+    z-index: 1;
+    top: 650px;
+    left: 700px;
+}
+.posters{
+    position: absolute;
+    z-index: 1;
+    top: 800px;
+    left: 500px;
+}
+.dibujos{
+    position: absolute;
+    z-index: 1;
+    top: 950px;
+    left: 670px;
+}
+.lienzos{
+    position: absolute;
+    z-index: 1;
+    top: 750px;
+    left: 850px;
+}
+.fotos{
+    position: absolute;
+    z-index: 1;
+    top: 900px;
+    left: 970px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Todos los HTML */
+footer {
+    display: flex;
+    align-items: flex-end;
+    background-color: #befcfeab;
+    padding-top: 27px;
+    padding-bottom: 27px;
+}
+.instagram{
+    justify-self: end;
+    padding: 10px;
+    text-decoration: none;
+    color: #2c9fa3;
+}
+.facebook{
+    justify-self: end;
+    text-decoration: none;
+    color: #2c9fa3;
+}    
+.instagram:hover, .facebook:hover{
+    color: #ff8846;
+}

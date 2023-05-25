@@ -2,35 +2,59 @@
 <html lang="en">
     <head>
         <meta charset="utf'8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gakubuchi Cuadros</title>
-        <link rel="icon" href="Logos/Logo.ico">
-        <link rel="stylesheet" href="index style.css">
+        <link rel="icon" href="./logos/logo.ico">
+        <link rel="stylesheet" href="./css/stylessheet.css">
     </head>
     <body>
-        <div class="logo">
-            <div class="Logo"> 
-                <a id="logo" href="index.html"> <img width="700px" src="Logos/Logo Largo.png" alt="logo del taller">
+        <header>
+            <div class="encabezado"> 
+                <a class="logo" href="index.html"> <img width="850px" src="./logos/logo-largo.png" alt="logo del taller">
+                <a class="busqueda" href="index.html"> <img width="50px" src="./logos/busqueda.png" alt="busqueda">   
+                <a class="carrito" href="index.html"> <img width="45px" src="./logos/carrito.png" alt="carrito">
             </div>
             <nav class="navbar">
-                <a href="index.html">Inicio</a>
-                <a href="productos.html">Productos</a>
-                <a href="trabajos.html">Trabajos</a>
-                <a href="contacto.html">Nosotros</a>
+                <a class="inicio" href="index.html">Inicio</a>
+                <a class="productos" href="./html/productos.html">Productos</a>
+                <a class="galeria" href="./html/galeria.html">Galeria</a>
+                <a class="diseñado" href="./html/diseñado.html">Diseñado</a>
+                <a class="contacto" href="./html/contacto.html">Nosotros</a>
             </nav>
-        </div>
-        <hr>
-        <h2>Atelier de Cuadros Artesanales</h2>
-        <ul><h3>Enmarcamos a Medida</h3>
+        </header>
+        <div class="slider">
+            <div>
+                <img class="slider1" src="./logos/slider1.png" alt="slider1">
+            </div>
+            <div>
+                <img class="slider2" src="./logos/slider2.png" alt="slider2">
+            </div>
+            <div>
+                <img class="slider3" src="./logos/slider3.png" alt="slider3">
+            </div>
+        </div> 
+        <h2 class="indexh2">Atelier de Cuadros Artesanales</h2>
+        <h3 class="indexh3">Enmarcamos a Medida:</h3>
+        <ul>
             <li>Espejos</li>
             <li>Posters</li>
             <li>Dibujos</li>
             <li>Lienzos</li>
             <li>Fotos</li>
-        </ol>
-        </hr>
-        <a id="instagram"  href="https://www.instagram.com/gakubuchiatelier/" target="_blank"> Instagram</a><br/>
-        <a id="facebook" href="https://www.facebook.com/gakubuchiatelier" target="_blank"> Facebook</a>
+        </ul>    
+        <div class="elementos-li">
+            <img class="espejos" width="220px" src="./trabajos/espejo.png">
+            <img class="posters" width="300px" src="./trabajos/poster.png">
+            <img class="dibujos" width="280px" src="./trabajos/dibujo.png">
+            <img class="lienzos" width="300px" src="./trabajos/lienzo.png">
+            <img class="fotos" width="300px" src="./trabajos/foto.png">
+        </div>  
     </body>
+    <footer>
+        <div class="redes-footer">
+            <a class="instagram"  href="https://www.instagram.com/gakubuchiatelier/" target="_blank"><img width="40px" src="./logos/instagram.png" alt="instagram"></a>
+            <a class="facebook" href="https://www.facebook.com/gakubuchiatelier" target="_blank"> <img width="35px" src="./logos/facebook.png" alt="facebook"></a>
+        </div>    
+    </footer>
 </html>
