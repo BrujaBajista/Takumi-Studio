@@ -22,8 +22,6 @@ time, mark, audio, video {
 /* Todos los HTML */
 
 body {
-    grid-template-columns: 
-    repeat(auto-fit, minmax(250px, 1fr));
     background-image: url(./logos/);
     background-repeat: no-repeat;
     background-position: center center;
@@ -96,7 +94,7 @@ body {
 }
 
 
-
+hola
 
 .indexh2{
     display: flex;
