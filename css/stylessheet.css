@@ -22,9 +22,8 @@ time, mark, audio, video {
 /* Todos los HTML */
 
 body {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr auto auto 1fr 1fr 1fr 1fr;
+    grid-template-columns: 
+    repeat(auto-fit, minmax(250px, 1fr));
     background-image: url(./logos/);
     background-repeat: no-repeat;
     background-position: center center;
@@ -33,8 +32,6 @@ body {
 }
 .encabezado{
     display: grid;
-    grid-column: 1 /4;
-    grid-row: 1 / 2;
     background-color: #befcfeab;
 }
 .logo{
@@ -42,7 +39,6 @@ body {
 }
 .busqueda{
     display: flex;
-    grid-column: 1 / 2;
     grid-row: 1 / 2;
     text-decoration: none;
     align-items: center;
@@ -51,7 +47,6 @@ body {
 .carrito{
     display: flex;
     grid-column: 3 / 4;
-    grid-row: 1 / 2;
     text-decoration: none;
     align-items: center;
     justify-content: center;
@@ -62,7 +57,6 @@ body {
     align-items: center;
     justify-content: center;
     grid-column: 1 / 4;
-    grid-row: 2 / 3;
     background-color: #befcfeab;
     text-align: center;
     font-weight: bold;
@@ -86,22 +80,17 @@ body {
 /* CSS Index */ 
 
 .slider{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-column: 1 / 2;
-    grid-template-rows: auto auto auto;
-    margin-top: 17px;
-    margin-bottom: 10px;
+    display: inline;
 }
-.slider div .slider1 {
+.slider1 {
     width: 450px;
     height: 350px;
 }
-.slider div .slider2 {
+.slider2 {
     width: 450px;
-    height: 350px;
+    height: 550px;
 }
-.slider div .slider3 {
+.slider3 {
     width: 450px;
     height: 350px;
 }
@@ -111,7 +100,6 @@ body {
     align-items: center;
     justify-content: center;
     grid-column: 1 / 2;
-    grid-row: 3 / 4;
     font-size: 30px;
     font-weight: bold;
     color: #000000;
@@ -120,8 +108,6 @@ body {
     padding:5px 100px 2px 100px;
 }
 .indexh3{
-    display: grid;
-    grid-row: 4 / 5;
     font-size: 20px;
     font-weight: bold;
     padding: 7px;
@@ -131,67 +117,56 @@ body {
     background-color: #ff8846;
     text-align: center;
     border-radius: 7px;
-    border: 3px solid #2c9fa3;ç
+    border: 3px solid #2c9fa3;
 }
 li{
-    /*seguir de aca*/
-    grid-row: 4 / 5;
     list-style-position: inside;
+    font-size: 20px;
+    font-weight: bold;
     padding: 7px;
-    padding-right: 10px;
     margin-top: -3px;
-    margin-left: 170px;
-    margin-right: 1040px;
+    margin-left: 100px;
+    margin-right: 1100px;
     background-color: #ff8846;
     text-align: center;
     border-radius: 7px;
-    border: 3px solid #2c9fa3;ç
-    font-size: 20px;
+    border: 3px solid #2c9fa3;
+}
+.elementos-li{
+    display: grid;
 }
 .espejos{
-    position: absolute;
-    z-index: 1;
-    top: 650px;
-    left: 700px;
+    
+    width: 220px;
 }
 .posters{
     position: absolute;
     z-index: 1;
     top: 800px;
     left: 500px;
+    width: 300px;
 }
 .dibujos{
     position: absolute;
     z-index: 1;
     top: 950px;
     left: 670px;
+    width: 280px;
 }
 .lienzos{
     position: absolute;
     z-index: 1;
     top: 750px;
     left: 850px;
+    width: 300px;
 }
 .fotos{
     position: absolute;
     z-index: 1;
     top: 900px;
     left: 970px;
+    width: 300px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -209,20 +184,17 @@ li{
 
 /* Todos los HTML */
 footer {
-    display: flex;
-    align-items: flex-end;
+    height: 50px;
     background-color: #befcfeab;
     padding-top: 27px;
     padding-bottom: 27px;
 }
 .instagram{
-    justify-self: end;
     padding: 10px;
     text-decoration: none;
     color: #2c9fa3;
 }
 .facebook{
-    justify-self: end;
     text-decoration: none;
     color: #2c9fa3;
 }    
