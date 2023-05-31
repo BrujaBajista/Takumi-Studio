@@ -169,9 +169,21 @@ li{
     left: 970px;
     width: 300px;
 }
-
-
-
+#image-upload{
+    border-radius: 7px;
+    border-style:3px solid #2c9fa3 ;
+    background-color: #ff8846;
+    margin-left: 455px;
+    
+}
+#preview-image{
+    width: 300px;
+    background-color: #ff8846;
+    margin-left: 500px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    border: 3px dashed #2c9fa3;
+}
 
 
 
@@ -186,7 +198,7 @@ li{
 
 /* Todos los HTML */
 footer {
-    height: 50px;
+    height: 100px;
     background-color: #befcfeab;
     padding-top: 27px;
     padding-bottom: 27px;
@@ -199,6 +211,7 @@ footer {
 .facebook{
     text-decoration: none;
     color: #2c9fa3;
+    margin-top: -7px;
 }    
 .instagram:hover, .facebook:hover{
     color: #ff8846;
