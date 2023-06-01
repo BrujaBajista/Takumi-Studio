@@ -196,6 +196,10 @@ li{
 
 
 
+
+
+
+
 /* Todos los HTML */
 footer {
     height: 100px;
@@ -211,7 +215,6 @@ footer {
 .facebook{
     text-decoration: none;
     color: #2c9fa3;
-    margin-top: -7px;
 }    
 .instagram:hover, .facebook:hover{
     color: #ff8846;
