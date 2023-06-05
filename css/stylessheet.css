@@ -164,6 +164,10 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
 }
+.imagen-container {
+    margin: 10px;
+}
+
 .boton-cargar {
     margin-top: 10px;
     margin-left: 100px;
@@ -182,12 +186,13 @@ body {
 }
 .alto-container {
     margin-top: -100px;
+    margin-left: -10px;
 }
 #alto {
     width: 50px;
 }
 .ancho-container {
-    margin-top: 52px;
+    margin-top: 62px;
     display: flex;
     flex-direction: row;
     justify-content: center;
