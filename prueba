@@ -1,0 +1,346 @@
+.encabezado{
+    display: grid;
+    background-color: #befcfeab;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.a-logo {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-items: center;
+}
+.logo {
+    width: 850px;
+}
+.a-busqueda {
+    grid-column: 1 / 2;
+    justify-self: center;
+    margin-top: 30px;
+    text-decoration: none;
+}
+.busqueda{
+    width: 50px;
+}
+.a-carrito {
+    grid-column: 3 / 4;
+    justify-self: center;
+    margin-top: 30px;
+    text-decoration: none;
+}
+.carrito{
+    width: 47px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / 4;
+    background-color: #befcfeab;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.inicio, .productos, .galeria, .diseñado, .contacto{
+    text-decoration: none;
+    color: #2c9fa3;
+    margin-right: -2px;
+    border: 2px solid #ff8846;
+    border-radius: 5px;
+    padding-top: 7px;
+    padding-bottom: 3px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.navbar :hover{
+    color: #ff8846;
+}
+
+/* Vista Mobile */
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+    .navbar-toggle {
+        display: block;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        background-color: #000;
+    }
+    .navbar-toggle:before,
+    .navbar-toggle:after {
+        content: "";
+        display: block;
+        background-color: #fff;
+        height: 3px;
+        width: 100%;
+        margin: 5px 0;
+    }
+    input[type="checkbox"] {
+        display: none;
+    }
+    input[type="checkbox"]:checked ~ .navbar {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #6dd6da;
+        padding: 10px;
+        margin: 0;
+        width: 100%;
+        list-style-type: none;
+    }
+    .navbar li {
+        margin-bottom: 10px;
+    }
+    .navbar a {
+        text-decoration: none;
+        color: #2c9fa3;
+    }
+    
+
+
+    
+
+
+
+
+    .logo {
+        width: 600px;
+    }
+    
+    .a-busqueda {
+        display: grid;
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        justify-self: center;
+        text-decoration: none;
+    }
+    .busqueda {
+        width: 34px;
+    }
+    .a-carrito {
+        display: grid;
+        grid-row: 2 / 3;
+        grid-column: 4 / 5;
+        justify-self: end;
+        margin-right: 20px;
+        text-decoration: none;
+    }
+    .carrito {
+        width: 34px;
+    }
+    
+}
+
+/* Vista Pc */
+
+@media (min-width: 769px) {
+    .navbar-hamburguesa {
+        display: none;
+    }
+}
+
+
+
+
+/* CSS Index */ 
+
+
+
+
+
+
+.indexh2{
+    display: flex;
+    height: 37px;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / 2;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    background-color: #6dd6da;
+    text-align: center;
+    padding:5px 100px 2px 100px;
+}
+.indexh3{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 7px;
+    margin-left: 100px;
+    margin-top: 90px;
+    margin-right: 1100px;
+    background-color: #ff8846;
+    text-align: center;
+    border-radius: 7px;
+    border: 3px solid #2c9fa3;
+}
+.lista-enmarcaciones{
+    list-style-position: inside;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 7px;
+    margin-top: -3px;
+    margin-left: 100px;
+    margin-right: 1100px;
+    background-color: #ff8846;
+    text-align: start;
+    border-radius: 7px;
+    border: 3px solid #2c9fa3;
+}
+.elementos-li{
+    display: grid;
+}
+.espejos{
+    
+    width: 220px;
+}
+.posters{
+    position: absolute;
+    z-index: 1;
+    top: 800px;
+    left: 500px;
+    width: 300px;
+}
+.dibujos{
+    position: absolute;
+    z-index: 1;
+    top: 950px;
+    left: 670px;
+    width: 280px;
+}
+.lienzos{
+    position: absolute;
+    z-index: 1;
+    top: 750px;
+    left: 850px;
+    width: 300px;
+}
+.fotos{
+    position: absolute;
+    z-index: 1;
+    top: 900px;
+    left: 970px;
+    width: 300px;
+}
+
+
+
+
+
+
+
+
+
+.send-presupuesto{
+    background-color: #6dd6daab;
+}
+input {
+    width: 300px;
+    height: 29px;
+    background-color: #ff8846;
+    border: 2px solid #2c9fa3;
+}
+button{
+    border-radius: 7px;
+    border-color: #2c9fa3;
+    height: 29px;
+
+}
+#image-upload{
+    border-radius: 7px;
+    border-style:3px solid #2c9fa3 ;
+    background-color: #ff8846;
+    margin-left: 445px;
+    
+}
+#preview-image{
+    width: 300px;
+    background-color: #ff8846;
+    margin-left: 500px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    border: 3px dashed #2c9fa3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Todos los HTML */
+footer {
+    height: 100px;
+    background-color: #befcfeab;
+    padding-top: 27px;
+    padding-bottom: 27px;
+}
+.instagram{
+    padding: 10px;
+    text-decoration: none;
+    color: #2c9fa3;
+}
+.facebook{
+    text-decoration: none;
+    color: #2c9fa3;
+}    
+.instagram:hover, .facebook:hover{
+    color: #ff8846;
+}
+
+
+
+
+
+
+
+
+<header>
+<div class="encabezado"> 
+    <a class="logo" href="../index.html"> <img width="850px" src="../logos/logo-largo.png" alt="logo del taller">
+    <a class="busqueda" href="../index.html"> <img width="50px" src="../logos/busqueda.png" alt="busqueda">   
+    <a class="carrito" href="../index.html"> <img width="45px" src="../logos/carrito.png" alt="carrito">
+</div>
+<nav class="navbar">
+    <a class="inicio" href="../index.html">Inicio</a>
+    <a class="productos" href="productos.html">Productos</a>
+    <a class="galeria" href="galeria.html">Galeria</a>
+    <a class="diseñado" href="diseñado.html">Diseñado</a>
+    <a class="contacto" href="contacto.html">Nosotros</a>
+</nav>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
