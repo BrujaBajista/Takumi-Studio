@@ -511,12 +511,13 @@ body {
         justify-self: center;
     }
     .trabajos-horizontales{
+        grid-row: 2 / 3;
         width: 270px;
-        margin-top: 30px;
-        margin-left: 23px;
+        margin-top: 50px;
+        margin-bottom: 30px;
         border: 5px solid #000000;
         border-radius: 17px;
-        justify-self: end;
+        justify-self: center;
     }
 }
 
