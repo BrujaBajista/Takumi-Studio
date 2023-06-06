@@ -79,13 +79,6 @@ body {
 .menu li a:hover {
     color: #ff8846;
 }
-
-
-
-
-
-
-
 .after-header {
     display: flex;
     align-items: center;
@@ -192,8 +185,6 @@ body {
     margin-right: 7px;
     margin-bottom: 7px;
 }
-
-
 .envio-presupuesto {
     margin-top: 17px;
     margin-bottom: 17px;
