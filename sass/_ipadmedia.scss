@@ -1,0 +1,382 @@
+@media (min-width: 576px) {
+
+// Index Ipad Vision
+
+    header {
+        .encabezado {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            align-items: center;
+            background-color: #befcfeab;
+            .a-busqueda {
+                display: grid;
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+                justify-self: center;
+                text-decoration: none;
+                .busqueda {
+                    width: 50px;
+                }
+            }
+            .mb-logo {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+                justify-self: center;
+                padding-top: 10px;
+                .logo {
+                    width: 650px;
+                }
+            }
+            .a-carrito {
+                display: grid;
+                grid-column: 3  / 4;
+                grid-row: 1 / 2;
+                justify-self: center;
+                text-decoration: none;
+                .carrito {
+                    width: 47px;
+                }
+            }
+            .navbar {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                grid-column: 1 / 4;
+                text-align: center;
+                font-weight: bold;
+                font-size: 20px;
+                .inicio, .productos, .galeria, .disenado, .contacto {
+                    text-decoration: none;
+                    color: #2c9fa3;
+                    margin-right: -2px;
+                    border: 2px solid #ff8846;
+                    border-radius: 5px;
+                    padding-top: 7px;
+                    padding-bottom: 3px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+                & :hover {
+                    color: #ff8846;
+                }    
+            }
+            .navbar-hamburguesa {
+                display: none;
+            }
+        }
+    }    
+    .after-header {
+        display: none;
+    }    
+    .slider {
+    border: 3px solid #000000;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 17px;
+    }
+    .indexh2-mb {
+        font-size: 30px;
+        font-weight: bold;
+        color: #000000;
+        background-color: #ff8846;
+        text-align: center;
+        border: 3px solid #000000;
+        border-radius: 5px;
+        margin-top: 17px;
+        margin-bottom: 17px;
+        padding: 7px;
+    }
+    .lista-enmarcaciones {
+        list-style: none;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 30px;
+        background-color: #ff8846;
+        border-radius: 5px;
+        border: 3px solid #2c9fa3;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .texto-li {
+            display: flex;
+            align-content: center;
+            padding-bottom: 30px;
+            text-align: start;
+            gap: 30px;
+        }
+        li{    
+            .imagenes-li {
+                position: relative;
+                .espejos {
+                    width: 87px;
+                    top: -50px;
+                    right: -30px;
+                }
+                .posters {
+                    width: 141px;
+                    top: 20px;
+                    left: -15px;
+                    margin: 0 auto;
+                }
+                .dibujos {
+                    width: 111px;
+                    top: -20px;
+                    margin: 0 auto;
+                }
+                .lienzos {
+                    width: 140px;
+                    top: 20px;
+                    right: 10px;
+                    margin: 0 auto;
+                }
+                .fotos {
+                    width: 139px;
+                    top: -50px;
+                    left: 30px;
+                    margin: 0 auto;
+                }
+            }
+        }     
+    }
+    .envio-presupuesto {
+        margin-top: 17px;
+        margin-bottom: 17px;
+        border: 3px solid #000000;
+        background-color: #6dd6da;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        .obra-presupuesto {
+            border: 3px dashed #ff8846;
+            margin-right: 980px;
+            font-size: 20px;
+        }
+        .imagen-container {
+            margin: 10px;
+            .boton-cargar {
+                margin-top: 10px;
+                margin-left: 0px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .placeholder-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                #vista-previa {
+                    width: 170px;
+                    max-height: 170px;
+                }
+            }
+        }
+        .alto-container {
+            margin-top: -100px;
+            margin-left: 400px;
+            #alto {
+                width: 50px;
+            }
+        }
+        .ancho-container {
+            margin-top: 72px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            #ancho {
+                width: 50px;
+            }
+        }
+        #enviar {
+            padding: 5px 20px 5px 20px;
+            margin-top: 10px;
+            margin-left: 970px;
+            border-radius: 7px;
+            border-color: #000000;
+            background-color: #ff8846;
+            border-style: solid;
+            color: #2c9fa3;
+        }
+    }
+    
+// Productos Ipad Vision
+
+.seccion-productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #6dd6daab;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    .imagenes-productos-v {
+        width: 150px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .imagenes-productos-c{
+        height: 200px;
+        width: auto;
+        margin-bottom: 10px;
+    }
+    .imagenes-productos-h {
+        height: 150px;
+        width: auto;
+        margin-bottom: 10px;
+    }
+    .nombre-productos {
+        font-size: 18px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    .precio-productos {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .agregar-carrito {
+        padding: 10px 20px;
+        background-color: #ff8846;
+        color: #000000;
+        font-weight: bold;
+        border: 2px solid #2c9fa3;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        &:hover {
+            background-color: #2c9fa3;
+        }
+    }
+    .cargar-mas {
+        grid-column: 2 / 3;
+        padding: 10px 100px;
+        background-color: #ff8846;
+        color: #000000;
+        font-size: 17px;
+        font-weight: bold;
+        border: 2px solid #2c9fa3;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        &:hover {
+            background-color: #2c9fa3;
+        }
+    }    
+}
+
+// Galeria Ipad Vision 
+
+.galeria-obras {
+    display: grid;
+    margin-top: 17px;
+    margin-bottom: 17px;
+    background-color: #6dd6daab;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    .galeriah2-mb {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        text-decoration: underline;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .parrafo-gav {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        margin-top: 10px;
+        text-align: center;
+        font-size: 17px;
+        border: dotted;
+        border-color: #ff8846;
+    }
+    .trabajos-verticales {
+        grid-row: 3 / 4;
+        width: 200px;
+        margin-top: 30px;
+        margin-left: 4px;
+        border: 5px solid #000000;
+        border-radius: 17px;
+        justify-self: center;
+    }
+    .trabajos-horizontales {
+        grid-row: 4 / 5;
+        width: 270px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        border: 5px solid #000000;
+        border-radius: 17px;
+        justify-self: center;
+    }
+}
+
+// Disenado Ipad Vision 
+
+.seccion-disenado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #6dd6daab;
+    border: 3px solid #000000;
+    border-radius: 5px;  
+    .disenadoh1-mb{
+        text-decoration: underline;
+        font-size: 30px;
+        font-weight: bold;
+        color: #000000;
+        margin: 10px 0 50px 0;
+    }
+    .diseno-rectangular{
+        width: 300px;
+    }
+    .diseno-cuadrado{
+        width: 360px;
+    }
+    .button-selector{
+        padding: 5px 10px;
+        background-color: #ff8846;
+        color: #000000;
+        font-weight: bold;
+        border: 2px solid #2c9fa3;
+        border-radius: 5px;
+        margin-bottom: 50px;
+        margin-top: 10px;
+    }
+}
+
+// Contacto Ipad Vision 
+
+.descripcion {
+    border-collapse: separate;
+    border-radius: 5px;
+    margin: 17px auto;
+    border: 3px solid #000000;
+    background-color: #befcfeab;
+    padding: 20px;
+    p{
+        font-size: 20px;
+        text-align: center;
+        line-height: 1.4;
+        color: #000000;
+    }
+    .firma {
+        font-weight: bold;
+    }
+}
+
+}

@@ -6,21 +6,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gakubuchi Cuadros</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-        <link rel="icon" href="./logos/logo.ico">    
-        <link rel="stylesheet" href="./css/stylessheet.css">
+        <link rel="icon" href="./logos/logo.ico">
+        <link rel="stylesheet" href="./sass/main.css">
     </head>
     <body>
         <header>
             <div class="encabezado">
-                <a class="a-busqueda" href="index.html"> <img class="busqueda" src="./logos/busqueda.png" alt="busqueda"></a>
+                <a class="a-busqueda" href="index.html"> <img class="busqueda" src="./logos/busqueda.png" alt="logo de busqueda"></a>
                 <a class="mb-logo" href="index.html"> <img class="logo" src="./logos/logo-largo.png" alt="logo del taller"></a>
-                <a class="a-carrito" href="index.html"> <img class="carrito" src="./logos/carrito.png" alt="carrito"></a>
+                <a class="a-carrito" href="index.html"> <img class="carrito" src="./logos/carrito.png" alt="logo de carrito"></a>
                 <nav class="navbar">
                     <a class="inicio" href="index.html">Inicio</a>
                     <a class="productos" href="./html/productos.html">Productos</a>
                     <a class="galeria" href="./html/galeria.html">Galeria</a>
-                    <a class="diseñado" href="./html/diseñado.html">Diseñado</a>
-                    <a class="contacto" href="contacto.html">Nosotros</a>
+                    <a class="disenado" href="./html/disenado.html">Diseñado</a>
+                    <a class="contacto" href="./html/contacto.html">Nosotros</a>
                 </nav>
                 <input type="checkbox" id="toggle-menu" class="toggle-menu">
                 <label for="toggle-menu" class="navbar-hamburguesa">
@@ -32,49 +32,67 @@
                     <li><a class="inicio" href="index.html">Inicio</a></li>
                     <li><a class="productos" href="./html/productos.html">Productos</a></li>
                     <li><a class="galeria" href="./html/galeria.html">Galeria</a></li>
-                    <li><a class="diseñado" href="./html/disenado.html">Diseñado</a></li>
+                    <li><a class="disenado" href="./html/disenado.html">Diseñado</a></li>
                     <li><a class="contacto" href="./html/contacto.html">Nosotros</a></li>
                 </ul>
             </div>
         </header>
         <div class="after-header">
-            <a class="mb-busqueda" href="index.html"> <img class="busqueda" src="./logos/busqueda.png" alt="busqueda"></a>
-            <a class="mb-carrito" href="index.html"> <img class="carrito" src="./logos/carrito.png" alt="carrito"></a>
+            <a class="mb-busqueda" href="index.html"> <img class="busqueda" src="./logos/busqueda.png" alt="logo mobile de busqueda"></a>
+            <a class="mb-carrito" href="index.html"> <img class="carrito" src="./logos/carrito.png" alt="logo mobile de carrito"></a>
             <h3 class="indexh3-mb">Atelier de Cuadros Artesanales</h3>
         </div>
-    
-    <div class="slider">
-        <p>slider slider slider slider slider slider
-            slider slider slider slider slider slider
-            slider slider slider slider slider slider
-            slider slider slider slider slider slider
-            slider slider slider slider slider slider
-            slider slider slider slider slider slider
-            slider slider slider slider slider slider
-            slider slider slider slider slider slider
-            slider slider slider slider slider slider
-            slider slider slider slider slider slider
-            slider slider slider slider slider slider
-            slider slider slider slider slider slider
-            slider slider slider slider slider slider
-            slider slider slider slider slider slider
-            slider slider slider slider slider slider
-            slider slider slider slider slider slider
-            slider slider slider slider slider slider
-            slider slider slider slider slider slider
-            slider slider slider slider slider slider
-            slider slider slider slider slider slider
-        </p>
-    </div>    
-        
-        <h2 class="indexh2-mb">Enmarcamos a Medida:</h2>
 
+
+
+
+
+
+
+
+        <div id="slider-carousel" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./logos/slider1.png" class="d-block w-100" alt="imagen de slider 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="./logos/slider2.png" class="d-block w-100" alt="imagen de slider 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="./logos/slider3.png" class="d-block w-100" alt="imagen de slider 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#slider-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#slider-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2 class="indexh2-mb">Enmarcamos a Medida:</h2>
         <ul class="lista-enmarcaciones">
-            <li class="texto-li">► Espejos</li>
-            <li class="texto-li">► Posters</li>
-            <li class="texto-li">► Dibujos</li>
-            <li class="texto-li">► Lienzos</li>
-            <li class="texto-li">► Fotos</li>
+            <div class="texto-li">  
+                <li>► Espejos</li>
+                <li>► Posters</li>
+                <li>► Dibujos</li>
+                <li>► Lienzos</li>
+                <li>► Fotos</li>
+            </div>    
             <li>
                 <div class="imagenes-li">
                     <img class="espejos" src="./trabajos/espejo.png">
@@ -84,7 +102,7 @@
                     <img class="fotos" src="./trabajos/foto.png">
                     </div>
             </li> 
-        </ul> 
+        </ul>
         <div class="envio-presupuesto">
             <h3 class="obra-presupuesto">Carga tu Obra y Solicita tu Presupuesto</h3>
             <form action="procesar_formulario.php" method="post" enctype="multipart/form-data">
@@ -93,27 +111,25 @@
                             <label for="imagen"></label>
                             <input type="file" id="imagen" name="imagen" multiple>
                         </div>
-                    <div class="placeholder-container">
-                        <img id="vista-previa" src="./logos/placeholder.png" alt="Vista previa de la imagen">
-                    </div>
+                        <div class="placeholder-container">
+                            <img id="vista-previa" src="./logos/placeholder.png" alt="vista previa de imagen para pedir presupuesto">
+                        </div>
                 </div>
-
                 <div class="alto-container">
                     <label for="alto">Alto en Cm:</label>
                     <input type="text" id="alto" name="alto">
                 </div>
-
                 <div class="ancho-container">
                     <label for="ancho">Ancho en Cm:</label>
                     <input type="text" id="ancho" name="ancho">
                 </div>
-            
                 <input type="submit" id="enviar" value="Enviar">
             </form>
         </div>
         
             
-        
+                
+            
 
 
 
@@ -131,12 +147,18 @@
 
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        
         <footer>
             <div class="redes-footer">
-                <a class="instagram"  href="https://www.instagram.com/gakubuchiatelier/" target="_blank"><img width="40px" src="./logos/instagram.png" alt="instagram"></a>
-                <a class="facebook" href="https://www.facebook.com/gakubuchiatelier" target="_blank"> <img width="35px" src="./logos/facebook.png" alt="facebook"></a>
-            </div>    
-        </footer>    
+                <a class="instagram"  href="https://www.instagram.com/gakubuchiatelier/" target="_blank"><img class="logo-instagram" src="./logos/instagram.png" alt="logo de instagram"></a>
+                <a class="facebook" href="https://www.facebook.com/gakubuchiatelier" target="_blank"> <img class="logo-facebook" src="./logos/facebook.png" alt="logo de facebook"></a>
+                <a class="whatsapp" href="https://wa.me/5491150298996" target="_blank"> <img class="logo-whatsapp" src="./logos/whatsapp.png" alt="logo de whatsapp"></a>
+            </div> 
+            <div class="contacto-footer">    
+                <p>Zaida Alvarez Quintana</p>
+                <a class="mail-footer" href="https://mail.google.com/mail/u/0/?pli=1#inbox?compose=new">zaidaalvarezquintana@gmail.com</a>
+            </div> 
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>    
     </body>
 </html>

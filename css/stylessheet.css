@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe,
+/*html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -21,7 +21,7 @@ time, mark, audio, video {
 
 /* Todos los HTML Mobile Vision */
 
-body {
+/* body {
     background-image: url(./logos/);
     background-repeat: no-repeat;
     background-position: center center;
@@ -87,8 +87,8 @@ body {
 }
 .toggle-menu:checked ~ .menu {
     display: block;
-}
-.after-header {
+} */
+/* .after-header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,15 +96,9 @@ body {
     border: 3px solid #000000;
     border-radius: 5px;
     padding-top: 5px;
-}
-.indexh3-mb {
-    order: 2;
-    font-size: 25px;
-    font-weight: bold;
-    color: #2c9fa3;
-    text-align: center;
-}
-.mb-busqueda {
+} */
+
+/* .mb-busqueda {
     margin-right: 20px;
     order: 1;
     justify-self: start;
@@ -125,12 +119,12 @@ body {
 }
 .a-carrito{
     display: none;
-}
+} */
 
 /* Index Mobile Vision */
 
 /* slider */
-.slider {
+/* .slider {
     border: 3px solid #000000;
     border-radius: 5px;
     display: flex;
@@ -138,8 +132,8 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 17px;
-}
-.indexh2-mb{
+} */
+/* .indexh2-mb{
     font-size: 20px;
     font-weight: bold;
     color: #000000;
@@ -163,8 +157,8 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
-.texto-li {
+} */
+/* .texto-li {
     margin-right: 7px;
     margin-bottom: 7px;
 }
@@ -174,8 +168,8 @@ body {
     justify-content: center;
     align-items: center;
     
-}   
-.espejos{
+}    */
+/* .espejos{
     width: 87px;
     margin-right: 7px;
     margin-bottom: 7px;
@@ -199,8 +193,8 @@ body {
     width: 140px;
     margin-right: 7px;
     margin-bottom: 7px;
-}
-.envio-presupuesto {
+} */
+/* .envio-presupuesto {
     margin-top: 17px;
     margin-bottom: 17px;
     border: 3px solid #000000;
@@ -209,16 +203,16 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-}
-.obra-presupuesto{
+} */
+/* .obra-presupuesto{
     border: 3px dashed #ff8846;
     margin-right: 155px;
     font-size: 17px;
 }
 .imagen-container {
     margin: 10px;
-}
-.boton-cargar {
+} */
+/* .boton-cargar {
     margin-top: 10px;
     margin-left: 100px;
     display: flex;
@@ -229,12 +223,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-#vista-previa {
+} */
+/* #vista-previa {
     width: 170px;
     max-height: 170px;
-}
-.alto-container {
+} */
+/* .alto-container {
     margin-top: -100px;
     margin-left: -10px;
 }
@@ -259,11 +253,11 @@ body {
     background-color: #ff8846;
     border-style: solid;
     color: #2c9fa3;
-}
+} */
 
 /* Galeria Mobile Vision */
 
-.galeria-obras {
+/* .galeria-obras {
     margin-top: 17px;
     margin-bottom: 17px;
     background-color: #6dd6daab;
@@ -283,243 +277,7 @@ body {
     margin-left: 23px;
     border: 5px solid #000000;
     border-radius: 17px;
-}
-@media (min-width: 768px) {
-
-/* Index Desktop Vision */
-
-    .encabezado{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        align-items: center;
-        background-color: #befcfeab;
-    }
-    .after-header{
-        display: none;
-    }
-    .mb-logo {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-        justify-self: center;
-        padding-top: 10px;
-    }
-    .logo {
-        width: 850px;
-    }
-    .navbar-hamburguesa{
-        display: none;
-    }
-    .navbar{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        grid-column: 1 / 4;
-        background-color: #befcfeab;
-        border:3px solid #000000;
-        border-radius: 5px;
-        text-align: center;
-        font-weight: bold;
-        font-size: 20px;
-    }
-    .inicio, .productos, .galeria, .diseñado, .contacto{
-        text-decoration: none;
-        color: #2c9fa3;
-        margin-right: -2px;
-        border: 2px solid #ff8846;
-        border-radius: 5px;
-        padding-top: 7px;
-        padding-bottom: 3px;
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    .navbar :hover{
-        color: #ff8846;
-    }
-    .a-busqueda {
-        display: grid;
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-        justify-self: center;
-        text-decoration: none;
-    }
-    .busqueda {
-        width: 50px;
-    }
-    .a-carrito {
-        display: grid;
-        grid-column: 3  / 4;
-        grid-row: 1 / 2;
-        justify-self: center;
-        text-decoration: none;
-    }
-    .carrito {
-        width: 47px;
-    }
-    .slider {
-    border: 3px solid #000000;
-    border-radius: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 17px;
-    }
-    .indexh2-mb{
-        font-size: 30px;
-        font-weight: bold;
-        color: #000000;
-        background-color: #ff8846;
-        text-align: center;
-        border: 3px solid #000000;
-        border-radius: 5px;
-        margin-top: 17px;
-        margin-bottom: 17px;
-        padding: 7px;
-    }
-    .lista-enmarcaciones{
-        list-style: none;
-        font-size: 20px;
-        font-weight: bold;
-        padding: 30px;
-        background-color: #ff8846;
-        border-radius: 5px;
-        border: 3px solid #2c9fa3;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-    .texto-li {
-        margin-right: 7px;
-        margin-bottom: 7px;
-    }
-    .imagenes-li {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        
-    }   
-    .espejos{
-        width: 170px;
-        margin-right: 7px;
-        margin-bottom: 7px;
-    }
-    .posters{
-        width: 275px;
-        margin-right: 7px;
-        margin-bottom: 7px;
-    }
-    .dibujos{
-        width: 217px;
-        margin-right: 7px;
-        margin-bottom: 7px;
-    }
-    .lienzos{
-        width: 275px;
-        margin-right: 7px;
-        margin-bottom: 7px;
-    }
-    .fotos{
-        width: 275px;
-        margin-right: 7px;
-        margin-bottom: 7px;
-    }
-    .envio-presupuesto {
-        margin-top: 17px;
-        margin-bottom: 17px;
-        border: 3px solid #000000;
-        background-color: #6dd6da;
-        padding: 20px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-    }
-    .imagen-container {
-        margin: 10px;
-    }
-    .boton-cargar {
-        margin-top: 10px;
-        margin-left: 0px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .placeholder-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    #vista-previa {
-        width: 170px;
-        max-height: 170px;
-    }
-    .alto-container {
-        margin-top: -100px;
-        margin-left: 400px;
-    }
-    #alto {
-        width: 50px;
-    }
-    .ancho-container {
-        margin-top: 72px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-    #ancho {
-        width: 50px;
-    }
-    #enviar {
-        padding: 5px 20px 5px 20px;
-        margin-top: 10px;
-        margin-left: 970px;
-        border-radius: 7px;
-        border-color: #000000;
-        background-color: #ff8846;
-        border-style: solid;
-        color: #2c9fa3;
-    }
-    .obra-presupuesto{
-        border: 3px dashed #ff8846;
-        margin-right: 980px;
-        font-size: 20px;
-    }
-
-/* Galeria Desktop Vision */
-
-    .galeria-obras {
-        display: grid;
-        margin-top: 17px;
-        margin-bottom: 17px;
-        background-color: #6dd6daab;
-        border: 3px solid #000000;
-        border-radius: 5px;
-    }
-    .trabajos-verticales{
-        grid-row: 1 / 2;
-        width: 200px;
-        margin-top: 30px;
-        margin-left: 4px;
-        border: 5px solid #000000;
-        border-radius: 17px;
-        justify-self: center;
-    }
-    .trabajos-horizontales{
-        grid-row: 2 / 3;
-        width: 270px;
-        margin-top: 50px;
-        margin-bottom: 30px;
-        border: 5px solid #000000;
-        border-radius: 17px;
-        justify-self: center;
-    }
-}
+} */
 
 
 
@@ -577,22 +335,3 @@ body {
 
 
 
-
-/* Todos los HTML */
-footer {
-    height: 100px;
-    background-color: #befcfeab;
-    padding-top: 27px;
-    padding-bottom: 27px;
-    border: 3px solid #000000;
-    border-radius: 5px;
-}
-.instagram{
-    padding: 10px;
-    text-decoration: none;
-    color: #2c9fa3;
-}
-.facebook{
-    text-decoration: none;
-    color: #2c9fa3;
-}    
