@@ -1,83 +1,83 @@
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 
-// Index Ipad Vision
+// Index Desk Vision
 
     header {
-        .encabezado { 
+        .encabezado {
             display: grid;
-            grid-template-columns: 1fr repeat(3, auto);
+            grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr;
             align-items: center;
             background-color: #befcfeab;
             .a-busqueda {
-                display: none;
+                display: grid;
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+                justify-self: center;
+                text-decoration: none;
+                margin-top: 50px;
+                .busqueda {
+                    width: 50px;
+                }
             }
             .mb-logo {
-                grid-column: 2 / 4;
+                grid-column: 2 / 3;
                 grid-row: 1 / 2;
                 justify-self: center;
                 padding-top: 10px;
-                padding-right: 5px;
-                padding-bottom: 17px;
-                .logo { 
-                    width: 600px;
+                .logo {
+                    width: 750px;
                 }
             }
             .a-carrito {
-                display: none;
-            }
-            .navbar {
-                display: none;
-            }
-        }
-        .toggle-menu {
-            display: none;
-        }
-        .navbar-hamburguesa {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 30px;
-            height: 20px;
-            cursor: pointer;
-            transform: translate(7px);
-            margin-left: 80px;
-            .linea {
-                width: 100%;
-                height: 3px;
-                background-color: #000000;
-            }
-        }
-        .menu {
-            display: none;
-            grid-column: 1 / -1;
-            background-color: #befcfeab;
-            margin-right: 200px;
-            line-height: 0;
-            border: 3px solid #2c9fa3;
-            border-radius: 5px;
-            padding: 20px;
-            text-indent: 5.0em;
-            max-width: 300px;
-            max-height: 150px;
-            li {
-                list-style-position: inside;
-                grid-gap: 20px; 
-                padding-top: 10px;
-                margin-bottom: 10px;
-                a {
-                    color: #2c9fa3;
-                    text-decoration: none;
-                    &:hover {
-                        color: #ff8846;
-                    }
+                display: grid;
+                grid-column: 3  / 4;
+                grid-row: 1 / 2;
+                justify-self: center;
+                text-decoration: none;
+                margin-top: 50px;
+                .carrito {
+                    width: 47px;
                 }
             }
+            .navbar {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                grid-column: 1 / 4;
+                text-align: center;
+                font-weight: bold;
+                font-size: 20px;
+                .inicio, .productos, .galeria, .disenado, .contacto {
+                    text-decoration: none;
+                    color: #2c9fa3;
+                    margin-right: -2px;
+                    border: 2px solid #ff8846;
+                    border-radius: 5px;
+                    padding-top: 7px;
+                    padding-bottom: 3px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+                & :hover {
+                    color: #ff8846;
+                }    
+            }
+            .navbar-hamburguesa {
+                display: none;
+            }
+            .menu {
+                display: none;
+                border: none;
+                li {    
+                    display: none;
+                }    
+            }
         }
-        .toggle-menu:checked ~ .menu {
-            display: block;
-        }
-    }    
+    } 
+    .after-header {
+        display: none;
+    }
     .carousel-inner{
         border: 3px solid #000000;
         border-radius: 5px3;
@@ -109,7 +109,7 @@
         list-style: none;
         font-size: 20px;
         font-weight: bold;
-        padding: 30px;
+        padding: 10px;
         background-color: #ff8846;
         border-radius: 5px;
         border: 3px solid #2c9fa3;
@@ -122,35 +122,36 @@
             align-content: center;
             padding-bottom: 30px;
             text-align: start;
-            gap: 30px;
+            gap: 70px;
+            margin-top: 20px;
         }
         li{    
             .imagenes-li {
                 position: relative;
                 .espejos {
-                    width: 87px;
+                    width: 136px;
                     top: -50px;
                     right: -30px;
                 }
                 .posters {
-                    width: 141px;
+                    width: 220px;
                     top: 20px;
                     left: -15px;
                     margin: 0 auto;
                 }
                 .dibujos {
-                    width: 111px;
+                    width: 173px;
                     top: -20px;
                     margin: 0 auto;
                 }
                 .lienzos {
-                    width: 140px;
+                    width: 220px;
                     top: 20px;
                     right: 10px;
                     margin: 0 auto;
                 }
                 .fotos {
-                    width: 139px;
+                    width: 219px;
                     top: -50px;
                     left: 30px;
                     margin: 0 auto;
@@ -190,7 +191,7 @@
             display: flex;
             flex-direction: row;
             justify-content: start;
-            margin: -100px 0 0 145px;
+            margin: -100px 0 0 275px;
             #alto {
                 width: 50px;
             }
@@ -218,7 +219,7 @@
         }
     }    
     
-// Productos Ipad Vision
+// Productos Desk Vision
 
     .seccion-productos {
         display: grid;
@@ -270,7 +271,7 @@
         }
         .cargar-mas {
             grid-column: 2 / 3;
-            padding: 5px 100px;
+            padding: 10px 100px;
             background-color: #ff8846;
             color: #000000;
             font-size: 17px;
@@ -285,7 +286,7 @@
         }    
     }
 
-// Galeria Ipad Vision 
+// Galeria Desk Vision 
 
     .galeria-obras {
         display: grid;
@@ -331,7 +332,7 @@
         }
     }
 
-// Disenado Ipad Vision 
+// Disenado Desk Vision 
 
     .seccion-disenado {
         display: flex;
@@ -369,7 +370,7 @@
         }
     }
 
-// Contacto Ipad Vision 
+// Contacto Desk Vision 
 
     .descripcion {
         border-collapse: separate;

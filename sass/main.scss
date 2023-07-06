@@ -22,7 +22,6 @@ time, mark, audio, video {
 // Todos los HTML Mobile Vision
 
 body {
-    background-image: url(./logos/);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -37,10 +36,20 @@ body {
 // Index Mobile Vision
 
 .carousel-inner{
+    border: 3px solid #000000;
+    border-radius: 5px3;
+    margin-top: 17px;
     height: 300px;
-    width: 1400px;
+    width: auto;
 }
-
+.carousel-control-prev {
+    background-color: #000000AB;
+    margin-top: 20px;
+}
+.carousel-control-next {
+    background-color: #000000AB;
+    margin-top: 20px;
+}
 .indexh2-mb {
     font-size: 20px;
     font-weight: bold;
@@ -137,18 +146,17 @@ body {
     .alto-container {
         display: flex;
         flex-direction: row;
-        
-        margin: -100px 0 0 -17px;
+        justify-content: start;
+        margin: -100px 0 0 -14px;
         #alto {
             width: 50px;
         }
     }
     .ancho-container {
-        margin-top: 52px;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin-left: 20px;
+        margin-top: 55px;
         #ancho {
             width: 50px;
         }
@@ -311,6 +319,7 @@ body {
         margin-top: 10px;
     }
 }
+
 // Contacto Mobile Vision
 
 .descripcion {
@@ -333,5 +342,7 @@ body {
 }
 
 @import'ipadmedia';
+
+@import'deskmedia';
 
 @import'footer';
