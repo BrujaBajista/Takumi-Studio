@@ -84,6 +84,7 @@ header .menu {
   border-radius: 5px;
   padding: 20px;
   text-indent: 5em;
+  font-style: oblique;
   max-width: 300px;
   max-height: 150px;
 }
