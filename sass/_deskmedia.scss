@@ -40,6 +40,59 @@
                     width: 47px;
                 }
             }
+            .a-carrito-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                grid-column: 3 / 4;
+                flex-wrap: wrap;
+                white-space: nowrap;
+                font-weight: bold;
+                font-size: 20px;
+                border: solid 3px #ff8846;
+                border-radius: 7px;
+                padding: 10px 0px 10px 20px;
+                word-spacing: 3px;
+                .texto-carrito {
+                    color: #2c9fa3;   
+                }
+                #carrito-lista {
+                    display: flex;
+                    flex-wrap: wrap;
+                    white-space: nowrap;
+                    padding: 5px;
+                    
+                }
+                .cantidad-unidades{
+                    background-color: red;
+                }
+                .mas-unidades {
+                    background-color: #ff8846;
+                    color: #000000;
+                    font-weight: bold;
+                    border: 2px solid #2c9fa3;
+                    border-radius: 5px;
+                    padding: 2px 8px 2px 8px;
+                    margin: 5px;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #2c9fa3;
+                    }
+                }    
+                .menos-unidades {
+                    background-color: #ff8846;
+                    color: #000000;
+                    font-weight: bold;
+                    border: 2px solid #2c9fa3;
+                    border-radius: 5px;
+                    padding: 2px 10px 2px 10px;
+                    margin: 5px;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #2c9fa3;
+                    }
+                }
+            }
             .navbar {
                 display: flex;
                 align-items: center;
