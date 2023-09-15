@@ -1,92 +1,138 @@
-let opcion;
-let terminar_bucle = false;
-let datos_contacto1 = "Si necesitas asesoramiento escribinos en instagram: @gakubuchiatelier\n\nHorarios de Atención de 12 a 18";
-let datos_contacto2 = "Si tenes consulta con tu compra comunicate a nuestro mail: zaidaalvarezquintana@gmail.com\n\nHorarios de Atención de 12 a 18";
-let datos_contacto3 = "¿Queres contactarnos? Escribinos al wsp: 01150298996\n\nHorarios de Atención de 12 a 18";
-const contactanos1 = () => {
-    alert(datos_contacto1);
-};
-const contactanos2 = () => {
-    alert(datos_contacto2);
-};
-const contactanos3 = () => {
-    alert(datos_contacto3);
-};
+//Carrito
 
-const productos = [
-    { id: 1, nombre: "Cuadro A3 (30x45)", precio: 10000 },
-    { id: 2, nombre: "Cuadro A4 (21x30cm)", precio: 8000 },
-    { id: 3, nombre: "Cuadro A5 (15x25cm)", precio: 6000 },
-    { id: 4, nombre: "Cuadro Porta Retrato (13x18cm)", precio: 4000 },
-    { id: 5, nombre: "Ventana de Passepartou", precio: 2000 },
-    { id: 6, nombre: "Espejo Personalizado", precio: 0 },
-    { id: 7, nombre: "Cuadro Personalizado", precio: 0 },
-];
+let carrito = JSON.parse(localStorage.getItem("storage_del_carrito")) || [];
 
-const carrito = [];
-
-function agregar_carrito(id) {
-    const producto_encontrado = productos.find((producto) => producto.id === id);
-    if (producto_encontrado) {
-        carrito.push(producto_encontrado);
-        alert(`Producto "${producto_encontrado.nombre}" agregado al carrito.`);
+const agregar_carrito = (nombre, precio) => {
+    const carritoIndex = carrito.findIndex((e) => e.nombre === nombre);
+    if (carritoIndex !== -1) {
+        carrito[carritoIndex].cantidad += 1;
     } else {
-        alert("Producto Fuera de Stock.");
-    }
-}
+        const precioFloat = parseFloat(precio.replace("$", ""));
+        carrito.push({ nombre, precio: precioFloat, cantidad: 1 });
+    };
+    actualizar_carrito();
+    carrito_local_storage();
+    console.log(carrito);
+    Toastify({
+        text: "Producto agregado al Carrito",
+        duration: 700,
+        className: "notificacion_producto_agregado",
+        style: {
+            borderRadius: '27px',
+            fontWeight: "bold",
+            color: "#000000",
+            background: "linear-gradient(to right, #ff8846, #ffdb46)",
+        },
+    }).showToast();
+};
 
-function mostrar_carrito() {
-    let carrito_info = "Productos en el carrito:\n\n";
-    carrito.forEach((producto) => {
-        carrito_info += `${producto.nombre} - Precio: ${producto.precio}\n`;
+const sumar_producto = (nombre) => {
+    carrito = carrito.map((e) => {
+        const { nombre: productoNombre, ...resto } = e;
+        if (productoNombre === nombre) {
+            return { nombre: productoNombre, ...resto, cantidad: e.cantidad + 1 };
+        } else {
+            return e;
+        };
     });
-    const carrito_total = carrito.reduce((total, producto) => total + producto.precio, 0);
-    carrito_info += `\nPrecio total del carrito: ${carrito_total}`;
-    alert(carrito_info);
-}
+    actualizar_carrito();
+    carrito_local_storage();
+    Toastify({
+        text: "Agregado",
+        duration: 700,
+        className: "notificacion_producto_sumado",
+        style: {
+            borderRadius: '27px',
+            fontWeight: "bold",
+            color: "#000000",
+            background: "linear-gradient(to right, #ff8846, #ffdb46)",
+        },
+    }).showToast();
+};
 
-do {
-    opcion = parseInt(prompt("Solicite su Consulta\n\n1. Solicitar un Presupuesto\n2. Asesoramiento de Enmarcación\n3. Consultas sobre su Compra\n4. Contactarse con Nosotros\n5. Ver Productos y Carrito\n\nPARA SEGUIR NAVEGANDO LA PAGINA INGRESE 0"));
-    switch (opcion) {
-        case 0:
-            alert("¡Que Disfrutes la Página!");
-            terminar_bucle = true;
-            break;
-        case 1:
-            let medidas;
-            let consulta;
-            let mail;
-            do {
-                medidas = prompt("Ingrese las Medidas de su Obra en Centimetros (Ej: 17cm x 37cm)");
-                consulta = prompt("Ingrese su Consulta");
-                mail = prompt("Ingrese su Correo Electrónico");
-                alert("Gracias por su Consulta y que Disfrutes la Página");
-            } while (false);
-            terminar_bucle = true;
-            break;
-        case 2:
-            contactanos1();
-            break;
-        case 3:
-            contactanos2();
-            break;
-        case 4:
-            contactanos3();
-            break;
-        case 5:
-            while (true) {
-                const seleccion = parseInt(prompt("Seleccione sus Productos\n\n1. Cuadro A3 (30x45)\n2. Cuadro A4 (21x30cm)\n3. Cuadro A5 (15x25cm)\n4. Cuadro Porta Retrato (13x18cm)\n5. Ventana de Passepartou\n6. Espejo Personalizado\n7. Cuadro Personalizado\n\nPARA FINALIZAR EL CARRITO INGRESE 0"));
-                if (seleccion === 0) {
-                    break;
-                }
-                agregar_carrito(seleccion);
-            }
-            mostrar_carrito();
-            break;
-        default:
-            if (!isNaN(opcion)) {
-                alert("Opción NO Válida");
-            }
-            break;
-    }
-} while (!terminar_bucle);
+const restar_producto = (nombre) => {
+    carrito = carrito.map((e) => {
+        const { nombre: productoNombre, ...resto } = e;
+        if (productoNombre === nombre) {
+            if (e.cantidad > 1) {
+                e.cantidad -= 1;
+                Toastify({
+                    text: "Eliminado",
+                    duration: 700,
+                    className: "notificacion_producto_restado",
+                    style: {
+                        borderRadius: '27px',
+                        fontWeight: "bold",
+                        color: "#000000",
+                        background: "linear-gradient(to right, #ff8846, #ffdb46)",
+                    },
+                }).showToast();
+            } else {
+                e.cantidad = 0;
+                Toastify({
+                    text: "Producto eliminado del Carrito",
+                    duration: 700,
+                    className: "notificacion_producto_eliminado",
+                    style: {
+                        borderRadius: '27px',
+                        fontWeight: "bold",
+                        color: "#000000",
+                        background: "linear-gradient(to right, #ff8846, #ffdb46)",
+                    },
+                }).showToast();
+            };
+        };
+        return e;
+    });
+    actualizar_carrito();
+    carrito_local_storage();
+};
+
+const actualizar_carrito = () => {
+    const lista_carrito = document.getElementById("carrito-lista");
+    const precio_total = document.getElementById("precio-total");
+    lista_carrito.innerHTML = "";
+    let total = 0;
+
+    carrito.forEach(({ nombre, precio, cantidad }) => {
+        if (cantidad >= 1) {
+            const item = document.createElement("li");
+            const subtotal = precio * cantidad;
+            item.textContent = `${nombre} - $${(subtotal).toFixed(2)} - ${ "(" + cantidad + ")"}`;
+
+            const boton_agregar_unidades = document.createElement("button");
+            boton_agregar_unidades.textContent = "+";
+            boton_agregar_unidades.classList.add("mas-unidades");
+            boton_agregar_unidades.addEventListener("click", () => {
+                sumar_producto(nombre);
+            });
+
+            const boton_restar_unidades = document.createElement("button")
+            boton_restar_unidades.textContent = "-";
+            boton_restar_unidades.classList.add("menos-unidades");
+            boton_restar_unidades.addEventListener("click", () => {
+                restar_producto(nombre);
+            });
+
+            item.appendChild(boton_agregar_unidades);
+            item.appendChild(boton_restar_unidades);
+            lista_carrito.appendChild(item);
+            total += subtotal;
+        };
+    });
+    precio_total.textContent = `Total: $${total.toFixed(2)}`;
+};
+
+const carrito_local_storage = () => {
+    localStorage.setItem("storage_del_carrito", JSON.stringify(carrito));
+};
+
+let botones_agregar_carrito = document.querySelectorAll(".agregar-carrito");
+botones_agregar_carrito.forEach((boton) => {
+    boton.addEventListener("click", () => {
+        let { textContent: nombre_producto } = boton.parentNode.querySelector(".nombre-productos");
+        let { textContent: precio_producto } = boton.parentNode.querySelector(".precio-productos");
+        agregar_carrito(nombre_producto, precio_producto);
+    });
+});
+actualizar_carrito();
