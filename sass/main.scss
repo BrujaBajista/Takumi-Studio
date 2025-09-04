@@ -1,3 +1,4 @@
+@use 'carousel';
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -11,338 +12,37 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+    height: 100%;
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	
 }
 
-// Todos los HTML Mobile Vision
+/* Para pantallas pequeñas */
+@media (max-width: 600px) {
+    body {
+    font-size: 14px;
+    }
+}
 
-body {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: 100vh;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}    
+/* Para pantallas medianas */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+    font-size: 16px;
+    }
+}
 
-@import'header';
-
-// Index Mobile Vision
-
-.carousel-inner{
-    border: 3px solid #000000;
-    border-radius: 5px3;
-    margin-top: 17px;
-    height: 300px;
-    width: auto;
-}
-.carousel-control-prev {
-    background-color: #000000AB;
-    margin-top: 20px;
-}
-.carousel-control-next {
-    background-color: #000000AB;
-    margin-top: 20px;
-}
-.indexh2-mb {
-    font-size: 20px;
-    font-weight: bold;
-    color: #000000;
-    background-color: #ff8846;
-    text-align: center;
-    border: 3px solid #000000;
-    border-radius: 5px;
-    margin-top: 17px;
-    margin-bottom: 17px;
-    padding: 7px;
-}
-.lista-enmarcaciones {
-    list-style: none;
-    font-size: 17px;
-    font-weight: bold;
-    padding: 30px;
-    background-color: #ff8846;
-    border-radius: 5px;
-    border: 3px solid #2c9fa3;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    .texto-li {
-        display: flex;
-        align-content: center;
-        padding-bottom: 30px;
-        text-align: start;
-        gap: 30px;
-    }
-    li{
-        .imagenes-li {
-            position: relative;
-            .espejos {
-                width: 87px;
-                top: -50px;
-                right: -30px;
-            }
-            .posters {
-                width: 141px;
-                top: 20px;
-                left: -15px;
-                margin: 0 auto;
-            }
-            .dibujos {
-                width: 111px;
-                top: -20px;
-                margin: 0 auto;
-            }
-            .lienzos {
-                width: 140px;
-                top: 20px;
-                right: 10px;
-                margin: 0 auto;
-            }
-            .fotos {
-                width: 139px;
-                top: -50px;
-                left: 30px;
-                margin: 0 auto;
-            }
-        }
-    }        
-}
-.envio-presupuesto {
-    margin-top: 17px;
-    margin-bottom: 17px;
-    border: 3px solid #000000;
-    background-color: #6dd6da;
-    padding: 20px;
-    .obra-presupuesto {
-        font-weight: bold;
-        font-size: 17px;
-        text-decoration: underline 2px;
-    }
-    .imagen-container {
-        .boton-cargar {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .placeholder-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;   
-            #vista-previa {
-                width: 170px;
-                max-height: 170px;
-            }
-        }
-    }
-    .alto-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        margin: -100px 0 0 -14px;
-        #alto {
-            width: 50px;
-        }
-    }
-    .ancho-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 55px;
-        #ancho {
-            width: 50px;
-        }
-    }
-    #enviar {
-        transform: translate(150px);
-        margin: 0 auto;
-        padding: 5px 20px;
-        border-radius: 7px;
-        border-color: #000000;
-        background-color: #ff8846;
-        border-style: solid;
-        color: #2c9fa3;
-        display: flex;
-        justify-content: center;
-    }
-}
-// Productos Mobile Vision 
-
-.seccion-productos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #6dd6daab;
-    border: 3px solid #000000;
-    border-radius: 5px;
-    .imagenes-productos-v {
-        width: 150px;
-        height: auto;
-        margin-bottom: 10px;
-    }
-    .imagenes-productos-c{
-        height: 200px;
-        width: auto;
-        margin-bottom: 10px;
-    }
-    .imagenes-productos-h {
-        height: 150px;
-        width: auto;
-        margin-bottom: 10px;
-    }
-    .nombre-productos {
+/* Para pantallas grandes */
+@media (min-width: 1025px) {
+    body {
+        background-color: black;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
         font-size: 18px;
-        margin-bottom: 5px;
-        font-weight: bold;
-    }
-    .precio-productos {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-    .agregar-carrito {
-        padding: 10px 20px;
-        background-color: #ff8846;
-        color: #000000;
-        font-weight: bold;
-        border: 2px solid #2c9fa3;
-        border-radius: 5px;
-        margin-bottom: 20px;
-        cursor: pointer;
-        &:hover {
-            background-color: #2c9fa3;
-        }
-    }
-    .cargar-mas {
-        padding: 10px 100px;
-        background-color: #ff8846;
-        color: #000000;
-        font-size: 17px;
-        font-weight: bold;
-        border: 2px solid #2c9fa3;
-        border-radius: 5px;
-        margin-bottom: 20px;
-        cursor: pointer;
-        &:hover {
-            background-color: #2c9fa3;
-        }
-    }    
-}
-
-// Galeria Mobile Vision
-
-.galeria-obras {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-    margin-top: 17px;
-    margin-bottom: 17px;
-    background-color: #6dd6daab;
-    border: 3px solid #000000;
-    border-radius: 5px;
-    padding: 20px;
-    .galeriah2-mb {
-        text-decoration: underline;
-        text-align: center;
-        font-size: 20px;
-        font-weight: bold;
-    }
-    .parrafo-gav {
-        margin-top: 10px;
-        text-align: center;
-        font-size: 17px;
-        border: dotted;
-        border-color: #ff8846;
-    }
-    .trabajos-verticales {
-        width: 150px;
-        margin-top: 30px;
-        margin-left: 4px;
-        border: 5px solid #000000;
-        border-radius: 17px;
-    }
-    .trabajos-horizontales {
-        width: 200px;
-        margin-top: 10px;
-        margin-left: 23px;
-        border: 5px solid #000000;
-        border-radius: 17px;
     }
 }
-
-// Disenado Mobile Vision
-
-.seccion-disenado {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #6dd6daab;
-    border: 3px solid #000000;
-    border-radius: 5px;  
-    .disenadoh1-mb{
-        text-decoration: underline;
-        font-size: 20px;
-        font-weight: bold;
-        color: #000000;
-        margin: 10px 0 50px 0;
-    }
-    .diseno-rectangular{
-        width: 200px;
-    }
-    .diseno-cuadrado{
-        width: 230px;
-    }
-    .button-selector{
-        padding: 5px 10px;
-        background-color: #ff8846;
-        color: #000000;
-        font-weight: bold;
-        border: 2px solid #2c9fa3;
-        border-radius: 5px;
-        margin-bottom: 50px;
-        margin-top: 10px;
-    }
-}
-
-// Contacto Mobile Vision
-
-.descripcion {
-    border-collapse: separate;
-    border-radius: 5px;
-    margin: 17px auto;
-    border: 3px solid #000000;
-    background-color: #befcfeab;
-    padding: 20px;
-    p{
-        font-size: 17px;
-        text-align: center;
-        line-height: 1.4;
-        color: #000000;
-        margin-bottom: 14px;
-    }
-    .firma {
-        font-weight: bold;
-    }
-}
-
-@import'ipadmedia';
-
-@import'deskmedia';
-
-@import'footer';
